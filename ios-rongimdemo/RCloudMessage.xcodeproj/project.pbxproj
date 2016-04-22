@@ -11,6 +11,7 @@
 		431CE33D1CC8E49B001B9F87 /* RedPacketResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 431CE3391CC8E49B001B9F87 /* RedPacketResource.bundle */; };
 		431CE3401CC8E4D6001B9F87 /* RedpacketCellResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 431CE33F1CC8E4D6001B9F87 /* RedpacketCellResource.bundle */; };
 		431CE3411CC8EEBB001B9F87 /* libRedpacketLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 431CE3331CC8E49B001B9F87 /* libRedpacketLib.a */; };
+		43C0210B1CC9CC5900333D68 /* RedpacketDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C0210A1CC9CC5900333D68 /* RedpacketDemoViewController.m */; };
 		466684241B5DEA10000B7504 /* RCDSettingBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 466684231B5DEA10000B7504 /* RCDSettingBaseViewController.m */; };
 		466684271B5DEA5B000B7504 /* RCDConversationSettingBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 466684261B5DEA5B000B7504 /* RCDConversationSettingBaseViewController.m */; };
 		4666842A1B5DEC04000B7504 /* RCDConversationSettingClearMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 466684291B5DEC04000B7504 /* RCDConversationSettingClearMessageCell.m */; };
@@ -266,13 +267,14 @@
 		17244C171B56553B000EFF79 /* RCDMessageNoDisturbSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RCDMessageNoDisturbSettingController.m; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		431CE3331CC8E49B001B9F87 /* libRedpacketLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libRedpacketLib.a; sourceTree = "<group>"; };
 		431CE3341CC8E49B001B9F87 /* RedpacketMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedpacketMessageModel.h; sourceTree = "<group>"; };
-		431CE3351CC8E49B001B9F87 /* RedpacketModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedpacketModel.h; sourceTree = "<group>"; };
 		431CE3361CC8E49B001B9F87 /* RedpacketOpenConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedpacketOpenConst.h; sourceTree = "<group>"; };
 		431CE3371CC8E49B001B9F87 /* RedpacketViewControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedpacketViewControl.h; sourceTree = "<group>"; };
 		431CE3391CC8E49B001B9F87 /* RedPacketResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RedPacketResource.bundle; sourceTree = "<group>"; };
 		431CE33A1CC8E49B001B9F87 /* YZHRedpacketBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZHRedpacketBridge.h; sourceTree = "<group>"; };
 		431CE33B1CC8E49B001B9F87 /* YZHRedpacketBridgeProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZHRedpacketBridgeProtocol.h; sourceTree = "<group>"; };
 		431CE33F1CC8E4D6001B9F87 /* RedpacketCellResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RedpacketCellResource.bundle; sourceTree = "<group>"; };
+		43C021091CC9CC5900333D68 /* RedpacketDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedpacketDemoViewController.h; sourceTree = "<group>"; };
+		43C0210A1CC9CC5900333D68 /* RedpacketDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedpacketDemoViewController.m; sourceTree = "<group>"; };
 		466684221B5DEA10000B7504 /* RCDSettingBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = RCDSettingBaseViewController.h; path = RCloudMessage/RCDSettingBaseViewController.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		466684231B5DEA10000B7504 /* RCDSettingBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = RCDSettingBaseViewController.m; path = RCloudMessage/RCDSettingBaseViewController.m; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		466684251B5DEA5B000B7504 /* RCDConversationSettingBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = RCDConversationSettingBaseViewController.h; path = RCloudMessage/RCDConversationSettingBaseViewController.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -730,7 +732,6 @@
 			children = (
 				431CE3321CC8E49B001B9F87 /* lib */,
 				431CE3341CC8E49B001B9F87 /* RedpacketMessageModel.h */,
-				431CE3351CC8E49B001B9F87 /* RedpacketModel.h */,
 				431CE3361CC8E49B001B9F87 /* RedpacketOpenConst.h */,
 				431CE3371CC8E49B001B9F87 /* RedpacketViewControl.h */,
 				431CE3381CC8E49B001B9F87 /* resources */,
@@ -761,6 +762,8 @@
 			isa = PBXGroup;
 			children = (
 				431CE33F1CC8E4D6001B9F87 /* RedpacketCellResource.bundle */,
+				43C021091CC9CC5900333D68 /* RedpacketDemoViewController.h */,
+				43C0210A1CC9CC5900333D68 /* RedpacketDemoViewController.m */,
 			);
 			name = RedpacketSDK;
 			path = ../../RedpacketSDK;
@@ -1747,6 +1750,7 @@
 				E4E939461AD65A95001E0AC6 /* AFSecurityPolicy.m in Sources */,
 				E412BD241ADE6BFB000DCA7A /* RCDHttpTool.m in Sources */,
 				46E17CC91B0EC32A001AC57A /* FMDatabasePool.m in Sources */,
+				43C0210B1CC9CC5900333D68 /* RedpacketDemoViewController.m in Sources */,
 				E475A3371AE6981B009C31D7 /* RCDPrivateSettingViewController.m in Sources */,
 				E4E9396E1AD65A95001E0AC6 /* UIImage+MultiFormat.m in Sources */,
 				E4E939941AD65BF4001E0AC6 /* RCDUserInfo.m in Sources */,
