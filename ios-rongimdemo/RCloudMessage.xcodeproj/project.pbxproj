@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		17244C181B56553B000EFF79 /* RCDMessageNoDisturbSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17244C171B56553B000EFF79 /* RCDMessageNoDisturbSettingController.m */; };
-		431CE33C1CC8E49B001B9F87 /* libRedpacketLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 431CE3331CC8E49B001B9F87 /* libRedpacketLib.a */; };
 		431CE33D1CC8E49B001B9F87 /* RedPacketResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 431CE3391CC8E49B001B9F87 /* RedPacketResource.bundle */; };
 		431CE3401CC8E4D6001B9F87 /* RedpacketCellResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 431CE33F1CC8E4D6001B9F87 /* RedpacketCellResource.bundle */; };
+		431CE3411CC8EEBB001B9F87 /* libRedpacketLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 431CE3331CC8E49B001B9F87 /* libRedpacketLib.a */; };
 		466684241B5DEA10000B7504 /* RCDSettingBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 466684231B5DEA10000B7504 /* RCDSettingBaseViewController.m */; };
 		466684271B5DEA5B000B7504 /* RCDConversationSettingBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 466684261B5DEA5B000B7504 /* RCDConversationSettingBaseViewController.m */; };
 		4666842A1B5DEC04000B7504 /* RCDConversationSettingClearMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 466684291B5DEC04000B7504 /* RCDConversationSettingClearMessageCell.m */; };
@@ -702,11 +702,11 @@
 				E4C330FE1A0C725200E31B9A /* CoreVideo.framework in Frameworks */,
 				E4C330FC1A0C724A00E31B9A /* CoreTelephony.framework in Frameworks */,
 				E4C330FA1A0C724400E31B9A /* CoreMedia.framework in Frameworks */,
-				431CE33C1CC8E49B001B9F87 /* libRedpacketLib.a in Frameworks */,
 				E4C330F81A0C723A00E31B9A /* CoreAudio.framework in Frameworks */,
 				A6BD04181B1EEA6B00ACAF17 /* RongIMLib.framework in Frameworks */,
 				E4C330F61A0C722F00E31B9A /* CFNetwork.framework in Frameworks */,
 				E4C330F41A0C722300E31B9A /* AudioToolbox.framework in Frameworks */,
+				431CE3411CC8EEBB001B9F87 /* libRedpacketLib.a in Frameworks */,
 				E4C330F21A0C721D00E31B9A /* AVFoundation.framework in Frameworks */,
 				E4C4E7E61A0A2F2E00140067 /* UIKit.framework in Frameworks */,
 				E4C4E7E41A0A2F2800140067 /* CoreGraphics.framework in Frameworks */,
@@ -716,13 +716,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		431CE3301CC8E488001B9F87 /* 红包 SDK */ = {
+		431CE3301CC8E488001B9F87 /* Redpacket */ = {
 			isa = PBXGroup;
 			children = (
 				431CE33E1CC8E4BB001B9F87 /* RedpacketSDK */,
 				431CE3311CC8E49B001B9F87 /* RedpacketLib */,
 			);
-			name = "红包 SDK";
+			name = Redpacket;
 			sourceTree = "<group>";
 		};
 		431CE3311CC8E49B001B9F87 /* RedpacketLib */ = {
@@ -1237,7 +1237,7 @@
 		E4D40F1F1A031F460045097C = {
 			isa = PBXGroup;
 			children = (
-				431CE3301CC8E488001B9F87 /* 红包 SDK */,
+				431CE3301CC8E488001B9F87 /* Redpacket */,
 				A6447A351B1DC0F400EA2CEE /* RCWatchKitCommon */,
 				E4D40F2A1A031F460045097C /* RCloudMessage */,
 				A6447A061B1DBE6500EA2CEE /* 融云 Demo WatchKit Extension */,
@@ -1977,6 +1977,7 @@
 				LD_NO_PIE = NO;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/../../RedpacketLib/lib/",
 					"$(inherited)",
 					"$(PROJECT_DIR)/framework",
 					"$(PROJECT_DIR)/RCloudMessage/Utilities/UMAnalytics",
@@ -2103,6 +2104,7 @@
 				LD_NO_PIE = NO;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/../../RedpacketLib/lib/",
 					"$(inherited)",
 					"$(PROJECT_DIR)/framework",
 					"$(PROJECT_DIR)/RCloudMessage/Utilities/UMAnalytics",
@@ -2371,6 +2373,7 @@
 				LD_NO_PIE = NO;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/../../RedpacketLib/lib/",
 					"$(inherited)",
 					"$(PROJECT_DIR)/framework",
 					"$(PROJECT_DIR)/RCloudMessage/Utilities/UMAnalytics",
@@ -2402,6 +2405,7 @@
 				LD_NO_PIE = NO;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/../../RedpacketLib/lib/",
 					"$(inherited)",
 					"$(PROJECT_DIR)/framework",
 					"$(PROJECT_DIR)/RCloudMessage/Utilities/UMAnalytics",

@@ -25,10 +25,18 @@
 #import "RCDTestMessage.h"
 #import "RCDTestMessageCell.h"
 
+#pragma mark - 红包相关的宏定义
+#define REDPACKET_BUNDLE(name) @"RedpacketCellResource.bundle/" name
+#define REDPACKET_TAG 2016
+#pragma mark - 
 
 @interface RCDChatViewController () <UIActionSheetDelegate, RCRealTimeLocationObserver, RealTimeLocationStatusViewDelegate, UIAlertViewDelegate, RCMessageCellDelegate>
 @property (nonatomic, weak)id<RCRealTimeLocationProxy> realTimeLocation;
 @property (nonatomic, strong)RealTimeLocationStatusView *realTimeLocationStatusView;
+#pragma mark - 红包相关的属性
+
+#pragma mark - 
+
 @end
 
 @implementation RCDChatViewController
@@ -128,6 +136,15 @@
  在super之后加上自己的处理。
  
  */
+    
+#pragma mark - 云账户增加插件功能
+    UIImage *icon = [UIImage imageNamed:REDPACKET_BUNDLE(@"redpacket_redpacket")];
+    assert(icon);
+    [self.pluginBoardView insertItemWithImage:icon
+                                        title:NSLocalizedString(@"红包", @"红包")
+                                      atIndex:0
+                                          tag:REDPACKET_TAG];
+#pragma mark -
   
   //默认输入类型为语音
   //self.defaultInputType = RCChatSessionInputBarInputExtention;
@@ -412,6 +429,11 @@
                 }
                 
             } break;
+#pragma mark - 云账户增加红包插件点击回调
+            case REDPACKET_TAG: {
+                // some code
+            }
+#pragma mark -
         default:
             [super pluginBoardView:pluginBoardView clickedItemWithTag:tag];
             break;
@@ -758,5 +780,5 @@
     }
 }
 
-
+#pragma mark -
 @end
