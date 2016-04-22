@@ -22,6 +22,11 @@
 #import "RCDUserInfo.h"
 #import "RCDFriendInvitationTableViewController.h"
 
+#pragma mark - 红包相关头文件
+#import "RedpacketDemoViewController.h"
+
+#pragma mark -
+
 @interface RCDChatListViewController ()
 
 //@property (nonatomic,strong) NSMutableArray *myDataSource;
@@ -162,7 +167,9 @@
         }
         
         if (conversationModelType == RC_CONVERSATION_MODEL_TYPE_NORMAL) {
-            RCDChatViewController *_conversationVC = [[RCDChatViewController alloc]init];
+#pragma mark - 对于特定的界面使用红包功能
+            RCDChatViewController *_conversationVC = [[RedpacketDemoViewController alloc]init];
+#pragma mark -
             _conversationVC.conversationType = model.conversationType;
             _conversationVC.targetId = model.targetId;
             _conversationVC.userName = model.conversationTitle;
