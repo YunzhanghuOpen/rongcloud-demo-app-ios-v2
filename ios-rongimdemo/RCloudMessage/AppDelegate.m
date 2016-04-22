@@ -24,6 +24,10 @@
 #import "RCDTestMessage.h"
 #import "MobClick.h"
 
+#pragma mark - 红包相关头文件
+#import "AppDelegate+RedpacketConfig.h"
+#pragma mark -
+
 //#define RONGCLOUD_IM_APPKEY @"e0x9wycfx7flq" //offline key
 #define RONGCLOUD_IM_APPKEY @"z3v5yqkbv8v30" // online key
 
@@ -261,6 +265,11 @@
   //    NSArray *loadedContents = [NSKeyedUnarchiver
   //                               unarchiveObjectWithData:data];
   //    NSLog(@"loadedContents size is %d", loadedContents.count);
+    
+#pragma mark - 配置红包信息
+    [self configRedpacket];
+#pragma mark -
+    
   return YES;
 }
 
