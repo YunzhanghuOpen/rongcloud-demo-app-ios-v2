@@ -26,6 +26,7 @@
 
 #pragma mark - 红包相关头文件
 #import "AppDelegate+RedpacketConfig.h"
+#import "RedpacketMessage.h"
 #pragma mark -
 
 //#define RONGCLOUD_IM_APPKEY @"e0x9wycfx7flq" //offline key
@@ -80,6 +81,7 @@
   
   // 注册自定义测试消息
   [[RCIM sharedRCIM] registerMessageType:[RCDTestMessage class]];
+  [[RCIM sharedRCIM] registerMessageType:[RedpacketMessage class]];
     
   //设置会话列表头像和会话界面头像
 
