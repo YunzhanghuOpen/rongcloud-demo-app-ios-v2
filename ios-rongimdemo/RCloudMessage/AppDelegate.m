@@ -25,7 +25,7 @@
 #import "MobClick.h"
 
 #pragma mark - 红包相关头文件
-#import "AppDelegate+RedpacketConfig.h"
+#import "RedpacketConfig.h"
 #import "RedpacketMessage.h"
 #pragma mark -
 
@@ -269,7 +269,7 @@
   //    NSLog(@"loadedContents size is %d", loadedContents.count);
     
 #pragma mark - 配置红包信息
-    [self configRedpacket];
+    [RedpacketConfig configRedpacket];
 #pragma mark -
     
   return YES;
