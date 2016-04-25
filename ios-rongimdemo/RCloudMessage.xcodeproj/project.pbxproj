@@ -14,6 +14,7 @@
 		43C0210C1CC9F7D900333D68 /* libRedpacketLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 431CE3331CC8E49B001B9F87 /* libRedpacketLib.a */; };
 		43C0210F1CCA16E800333D68 /* AppDelegate+RedpacketConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C0210E1CCA16E800333D68 /* AppDelegate+RedpacketConfig.m */; };
 		43C021121CCDB97E00333D68 /* RedpacketConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C021111CCDB97E00333D68 /* RedpacketConfig.m */; };
+		43C021151CCDCC5A00333D68 /* RedpacketMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C021141CCDCC5A00333D68 /* RedpacketMessage.m */; };
 		466684241B5DEA10000B7504 /* RCDSettingBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 466684231B5DEA10000B7504 /* RCDSettingBaseViewController.m */; };
 		466684271B5DEA5B000B7504 /* RCDConversationSettingBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 466684261B5DEA5B000B7504 /* RCDConversationSettingBaseViewController.m */; };
 		4666842A1B5DEC04000B7504 /* RCDConversationSettingClearMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 466684291B5DEC04000B7504 /* RCDConversationSettingClearMessageCell.m */; };
@@ -281,6 +282,8 @@
 		43C0210E1CCA16E800333D68 /* AppDelegate+RedpacketConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+RedpacketConfig.m"; sourceTree = "<group>"; };
 		43C021101CCDB97E00333D68 /* RedpacketConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedpacketConfig.h; sourceTree = "<group>"; };
 		43C021111CCDB97E00333D68 /* RedpacketConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedpacketConfig.m; sourceTree = "<group>"; };
+		43C021131CCDCC5A00333D68 /* RedpacketMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedpacketMessage.h; sourceTree = "<group>"; };
+		43C021141CCDCC5A00333D68 /* RedpacketMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedpacketMessage.m; sourceTree = "<group>"; };
 		466684221B5DEA10000B7504 /* RCDSettingBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = RCDSettingBaseViewController.h; path = RCloudMessage/RCDSettingBaseViewController.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		466684231B5DEA10000B7504 /* RCDSettingBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = RCDSettingBaseViewController.m; path = RCloudMessage/RCDSettingBaseViewController.m; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		466684251B5DEA5B000B7504 /* RCDConversationSettingBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = RCDConversationSettingBaseViewController.h; path = RCloudMessage/RCDConversationSettingBaseViewController.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -770,6 +773,8 @@
 				431CE33F1CC8E4D6001B9F87 /* RedpacketCellResource.bundle */,
 				43C021091CC9CC5900333D68 /* RedpacketDemoViewController.h */,
 				43C0210A1CC9CC5900333D68 /* RedpacketDemoViewController.m */,
+				43C021131CCDCC5A00333D68 /* RedpacketMessage.h */,
+				43C021141CCDCC5A00333D68 /* RedpacketMessage.m */,
 				43C021101CCDB97E00333D68 /* RedpacketConfig.h */,
 				43C021111CCDB97E00333D68 /* RedpacketConfig.m */,
 				43C0210D1CCA16E800333D68 /* AppDelegate+RedpacketConfig.h */,
@@ -1776,6 +1781,7 @@
 				E4E939C11AD65D41001E0AC6 /* RCDMeTableViewController.m in Sources */,
 				E4E939B71AD65CFD001E0AC6 /* RCDGroupDetailViewController.m in Sources */,
 				E4E939541AD65A95001E0AC6 /* JSONModelArray.m in Sources */,
+				43C021151CCDCC5A00333D68 /* RedpacketMessage.m in Sources */,
 				E4BFAE211A1217C0007165B1 /* AppDelegate.m in Sources */,
 				A6827BE11B15E94A000B9862 /* SelectAppKeyViewController.m in Sources */,
 				E4E939761AD65AC7001E0AC6 /* RCDAddressBookTableViewCell.m in Sources */,
