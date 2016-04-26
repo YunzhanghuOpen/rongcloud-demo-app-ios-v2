@@ -16,6 +16,7 @@
 		43C021251CCDE9B500333D68 /* RedpacketMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C021201CCDE9B500333D68 /* RedpacketMessage.m */; };
 		43C021261CCDF58600333D68 /* RongIMLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6BD04171B1EEA6B00ACAF17 /* RongIMLib.framework */; };
 		43EFD2641CCE0447008CEBAF /* RedpacketMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 43EFD2631CCE0447008CEBAF /* RedpacketMessageCell.m */; };
+		43EFD2771CCF65C1008CEBAF /* RedpacketChangeMoneySegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 43EFD2761CCF65C1008CEBAF /* RedpacketChangeMoneySegue.m */; };
 		466684241B5DEA10000B7504 /* RCDSettingBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 466684231B5DEA10000B7504 /* RCDSettingBaseViewController.m */; };
 		466684271B5DEA5B000B7504 /* RCDConversationSettingBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 466684261B5DEA5B000B7504 /* RCDConversationSettingBaseViewController.m */; };
 		4666842A1B5DEC04000B7504 /* RCDConversationSettingClearMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 466684291B5DEC04000B7504 /* RCDConversationSettingClearMessageCell.m */; };
@@ -284,6 +285,8 @@
 		43C021201CCDE9B500333D68 /* RedpacketMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedpacketMessage.m; sourceTree = "<group>"; };
 		43EFD2621CCE0447008CEBAF /* RedpacketMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedpacketMessageCell.h; sourceTree = "<group>"; };
 		43EFD2631CCE0447008CEBAF /* RedpacketMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedpacketMessageCell.m; sourceTree = "<group>"; };
+		43EFD2751CCF65C1008CEBAF /* RedpacketChangeMoneySegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedpacketChangeMoneySegue.h; sourceTree = "<group>"; };
+		43EFD2761CCF65C1008CEBAF /* RedpacketChangeMoneySegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedpacketChangeMoneySegue.m; sourceTree = "<group>"; };
 		466684221B5DEA10000B7504 /* RCDSettingBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = RCDSettingBaseViewController.h; path = RCloudMessage/RCDSettingBaseViewController.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		466684231B5DEA10000B7504 /* RCDSettingBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = RCDSettingBaseViewController.m; path = RCloudMessage/RCDSettingBaseViewController.m; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		466684251B5DEA5B000B7504 /* RCDConversationSettingBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = RCDConversationSettingBaseViewController.h; path = RCloudMessage/RCDConversationSettingBaseViewController.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -779,6 +782,8 @@
 				43C021201CCDE9B500333D68 /* RedpacketMessage.m */,
 				43EFD2621CCE0447008CEBAF /* RedpacketMessageCell.h */,
 				43EFD2631CCE0447008CEBAF /* RedpacketMessageCell.m */,
+				43EFD2751CCF65C1008CEBAF /* RedpacketChangeMoneySegue.h */,
+				43EFD2761CCF65C1008CEBAF /* RedpacketChangeMoneySegue.m */,
 			);
 			name = RedpacketSDK;
 			path = ../../RedpacketSDK;
@@ -1806,6 +1811,7 @@
 				E412BD1E1ADE19A4000DCA7A /* RCDChatListCell.m in Sources */,
 				E4E9395E1AD65A95001E0AC6 /* MBProgressHUD.m in Sources */,
 				E4BFAE741A121A6A007165B1 /* RCDLoginInfo.m in Sources */,
+				43EFD2771CCF65C1008CEBAF /* RedpacketChangeMoneySegue.m in Sources */,
 				A677D6A11B81EBB9007D5D90 /* RealTimeLocationViewController.m in Sources */,
 				E4BFAE6B1A121A13007165B1 /* RCDGroupViewController.m in Sources */,
 				E4E9396F1AD65A95001E0AC6 /* UIImage+WebP.m in Sources */,
