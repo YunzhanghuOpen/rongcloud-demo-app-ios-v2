@@ -273,7 +273,9 @@
         if(selectedUsers.count == 1)
         {
             RCUserInfo *user = selectedUsers[0];
-            RCDChatViewController *chat =[[RCDChatViewController alloc]init];
+#pragma mark - 对于特定的界面使用红包功能
+            RCDChatViewController *chat = [[RedpacketDemoViewController alloc]init];
+#pragma mark -
             chat.targetId                      = user.userId;
             chat.userName                    = user.name;
             chat.conversationType              = ConversationType_PRIVATE;
@@ -302,7 +304,9 @@
             [[RCIMClient sharedRCIMClient] createDiscussion:discussionTitle userIdList:userIdList success:^(RCDiscussion *discussion) {
                 NSLog(@"create discussion ssucceed!");
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    RCDChatViewController *chat =[[RCDChatViewController alloc]init];
+#pragma mark - 对于特定的界面使用红包功能
+                    RCDChatViewController *chat = [[RedpacketDemoViewController alloc]init];
+#pragma mark -
                     chat.targetId                      = discussion.discussionId;
                     chat.userName                    = discussion.discussionName;
                     chat.conversationType              = ConversationType_DISCUSSION;
