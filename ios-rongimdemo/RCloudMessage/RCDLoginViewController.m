@@ -23,6 +23,10 @@
 #import "SelectAppKeyViewController.h"
 #import "RCDataBaseManager.h"
 
+#pragma mark - 红包相关头文件
+#import "RedpacketConfig.h"
+#pragma mark -
+
 @interface RCDLoginViewController ()<UITextFieldDelegate>
 
 @property (retain, nonatomic) IBOutlet RCAnimatedImagesView* animatedImagesView;
@@ -437,7 +441,10 @@ MBProgressHUD* hud ;
     //设置当前的用户信息
     RCUserInfo *_currentUserInfo = [[RCUserInfo alloc]initWithUserId:userId name:userName portrait:nil];
     [RCIMClient sharedRCIMClient].currentUserInfo = _currentUserInfo;
-    
+#pragma mark - 红包相关代码
+    // 重新配置红包 token
+    [RedpacketConfig reconfig];
+#pragma mark -
     [RCDHTTPTOOL getUserInfoByUserID:userId
                           completion:^(RCUserInfo* user) {
                               [[RCIM sharedRCIM]refreshUserInfoCache:user withUserId:userId];

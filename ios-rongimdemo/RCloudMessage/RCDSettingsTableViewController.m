@@ -10,6 +10,10 @@
 #import "RCDLoginViewController.h"
 #import <RongIMLib/RongIMLib.h>
 
+#pragma mark - 红包相关头文件
+#import "RedpacketConfig.h"
+#pragma mark -
+
 @interface RCDSettingsTableViewController ()<UIAlertViewDelegate>
 
 @end
@@ -124,6 +128,10 @@
     self.view.window.rootViewController = navi;
     [[RCIMClient sharedRCIMClient]logout];
     //[[RCIMClient sharedRCIMClient]disconnect:NO];
+    
+#pragma mark - 红包相关代码
+    [RedpacketConfig clear];
+#pragma mark -
 }
 
 @end

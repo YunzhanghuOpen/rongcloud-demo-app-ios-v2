@@ -269,7 +269,7 @@
   //    NSLog(@"loadedContents size is %d", loadedContents.count);
     
 #pragma mark - 配置红包信息
-    [RedpacketConfig configRedpacket];
+    [RedpacketConfig config];
 #pragma mark -
     
   return YES;
@@ -476,6 +476,8 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
     self.window.rootViewController = navi;
   }
   [[RCIMClient sharedRCIMClient] disconnect:NO];
+    
+    [RedpacketConfig clear];
 }
 - (BOOL)getLoginStatus {
   NSString *token = [DEFAULTS stringForKey:@"userToken"];
