@@ -130,7 +130,7 @@
     //[[RCIMClient sharedRCIMClient]disconnect:NO];
     
 #pragma mark - 红包相关代码
-    [RedpacketConfig clear];
+    [RedpacketConfig logout];
 #pragma mark -
 }
 

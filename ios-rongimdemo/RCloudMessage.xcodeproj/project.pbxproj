@@ -47,7 +47,6 @@
 		A6447A151B1DBE6500EA2CEE /* 融云 Demo WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = A6447A141B1DBE6500EA2CEE /* 融云 Demo WatchKit App.app */; };
 		A6447A1D1B1DBE6500EA2CEE /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6447A1B1B1DBE6500EA2CEE /* Interface.storyboard */; };
 		A6447A1F1B1DBE6500EA2CEE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6447A1E1B1DBE6500EA2CEE /* Images.xcassets */; };
-		A6447A221B1DBE6500EA2CEE /* 融云 Demo WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A6447A051B1DBE6500EA2CEE /* 融云 Demo WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A6447A3E1B1DC12500EA2CEE /* RCWKRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A6447A3B1B1DC12500EA2CEE /* RCWKRequestHandler.m */; };
 		A6447A3F1B1DC12500EA2CEE /* RCWKSharedUserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = A6447A3D1B1DC12500EA2CEE /* RCWKSharedUserDefault.m */; };
 		A6447A851B1DC14A00EA2CEE /* ConversationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6447A431B1DC14A00EA2CEE /* ConversationController.m */; };
@@ -234,13 +233,6 @@
 			remoteGlobalIDString = A6447A131B1DBE6500EA2CEE;
 			remoteInfo = "融云 Demo WatchKit App";
 		};
-		A6447A201B1DBE6500EA2CEE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E4D40F201A031F460045097C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A6447A041B1DBE6500EA2CEE;
-			remoteInfo = "融云 Demo WatchKit Extension";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -250,7 +242,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				A6447A221B1DBE6500EA2CEE /* 融云 Demo WatchKit Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -777,8 +768,8 @@
 			isa = PBXGroup;
 			children = (
 				43C0211A1CCDE9B500333D68 /* RedpacketCellResource.bundle */,
-				43C0211B1CCDE9B500333D68 /* RedpacketConfig.h */,
 				43C0211C1CCDE9B500333D68 /* RedpacketConfig.m */,
+				43C0211B1CCDE9B500333D68 /* RedpacketConfig.h */,
 				43C0211D1CCDE9B500333D68 /* RedpacketDemoViewController.h */,
 				43C0211E1CCDE9B500333D68 /* RedpacketDemoViewController.m */,
 				43C0211F1CCDE9B500333D68 /* RedpacketMessage.h */,
@@ -1624,7 +1615,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				A6447A211B1DBE6500EA2CEE /* PBXTargetDependency */,
 			);
 			name = RCloudMessage;
 			productName = RongCloud;
@@ -1911,11 +1901,6 @@
 			target = A6447A131B1DBE6500EA2CEE /* 融云 Demo WatchKit App */;
 			targetProxy = A6447A161B1DBE6500EA2CEE /* PBXContainerItemProxy */;
 		};
-		A6447A211B1DBE6500EA2CEE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A6447A041B1DBE6500EA2CEE /* 融云 Demo WatchKit Extension */;
-			targetProxy = A6447A201B1DBE6500EA2CEE /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -2131,8 +2116,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/framework",
@@ -2440,8 +2425,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/framework",
@@ -2464,7 +2449,7 @@
 				OTHER_LIBTOOLFLAGS = "$(OTHER_LDFLAGS)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.redpacket.RongCloudDemo;
 				PRODUCT_NAME = RCloudMessage;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "e68e6ba7-f63e-4bc1-b917-a068d4b5edb9";
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
