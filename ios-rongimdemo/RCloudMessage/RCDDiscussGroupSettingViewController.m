@@ -18,6 +18,10 @@
 #import "RCDataBaseManager.h"
 #import "RCDAddFriendViewController.h"
 
+#pragma mark - 红包相关头文件
+#import "RedpacketDemoViewController.h"
+#pragma mark -
+
 @interface RCDDiscussGroupSettingViewController ()<UIActionSheetDelegate>
 
 @property (nonatomic, copy) NSString* discussTitle;
@@ -302,7 +306,7 @@
                 [[RCIMClient sharedRCIMClient] createDiscussion:discussionTitle userIdList:userIdList success:^(RCDiscussion *discussion) {
                     
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        RCDChatViewController *chat =[[RCDChatViewController alloc]init];
+                        RCDChatViewController *chat =[[RedpacketDemoViewController alloc]init];
                         chat.targetId                      = discussion.discussionId;
                         chat.userName                    = discussion.discussionName;
                         chat.conversationType              = ConversationType_DISCUSSION;
