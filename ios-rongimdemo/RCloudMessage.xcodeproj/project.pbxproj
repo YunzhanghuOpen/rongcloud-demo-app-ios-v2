@@ -1628,7 +1628,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0620;
-				ORGANIZATIONNAME = RongCloud;
+				ORGANIZATIONNAME = "云帐户";
 				TargetAttributes = {
 					A6447A041B1DBE6500EA2CEE = {
 						CreatedOnToolsVersion = 6.3.2;
