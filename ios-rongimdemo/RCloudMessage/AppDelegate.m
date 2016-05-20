@@ -27,6 +27,7 @@
 #pragma mark - 红包相关头文件
 #import "RedpacketConfig.h"
 #import "RedpacketMessage.h"
+#import "RedpacketTakenMessage.h"
 #pragma mark -
 
 //#define RONGCLOUD_IM_APPKEY @"e0x9wycfx7flq" //offline key
@@ -82,6 +83,7 @@
   // 注册自定义测试消息
   [[RCIM sharedRCIM] registerMessageType:[RCDTestMessage class]];
   [[RCIM sharedRCIM] registerMessageType:[RedpacketMessage class]];
+  [[RCIM sharedRCIM] registerMessageType:[RedpacketTakenMessage class]];
     
   //设置会话列表头像和会话界面头像
 
@@ -120,6 +122,15 @@
     NSString *userPortraitUri = [DEFAULTS objectForKey:@"userPortraitUri"];
   
   if (token.length && userId.length && password.length && !debugMode) {
+      
+      NSString *s = [NSString stringWithFormat:@"userid:%@, username:%@", userId, userName];
+      UIAlertView *a = [[UIAlertView alloc] initWithTitle:@""
+                                                  message:s
+                                                 delegate:nil
+                                        cancelButtonTitle:@"OK"
+                                        otherButtonTitles:nil, nil];
+      [a show];
+      
     RCUserInfo *_currentUserInfo =
     [[RCUserInfo alloc] initWithUserId:userId
                                     name:userNickName
@@ -477,7 +488,7 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
   }
   [[RCIMClient sharedRCIMClient] disconnect:NO];
     
-    [RedpacketConfig clear];
+    [RedpacketConfig logout];
 }
 - (BOOL)getLoginStatus {
   NSString *token = [DEFAULTS stringForKey:@"userToken"];
