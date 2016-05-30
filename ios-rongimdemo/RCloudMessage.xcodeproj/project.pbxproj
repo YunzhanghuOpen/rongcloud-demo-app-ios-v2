@@ -10,6 +10,7 @@
 		17244C181B56553B000EFF79 /* RCDMessageNoDisturbSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17244C171B56553B000EFF79 /* RCDMessageNoDisturbSettingController.m */; };
 		431CE33D1CC8E49B001B9F87 /* RedPacketResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 431CE3391CC8E49B001B9F87 /* RedPacketResource.bundle */; };
 		433C2D191CD0A34C00D2559D /* RedpacketTakenMessageTipCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 433C2D181CD0A34C00D2559D /* RedpacketTakenMessageTipCell.m */; };
+		434675521CFC592B00AEDE2A /* RedpacketTakenOutgoingMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 434675511CFC592B00AEDE2A /* RedpacketTakenOutgoingMessage.m */; };
 		4386BA6D1CD8935400B4D363 /* RedpacketTakenMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4386BA6C1CD8935400B4D363 /* RedpacketTakenMessage.m */; };
 		43AAFAF21CEEB23000B47348 /* libRedpacketLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43AAFAF01CEEACED00B47348 /* libRedpacketLib.a */; };
 		43C021221CCDE9B500333D68 /* RedpacketCellResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 43C0211A1CCDE9B500333D68 /* RedpacketCellResource.bundle */; };
@@ -270,6 +271,8 @@
 		431CE33B1CC8E49B001B9F87 /* YZHRedpacketBridgeProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZHRedpacketBridgeProtocol.h; sourceTree = "<group>"; };
 		433C2D171CD0A34C00D2559D /* RedpacketTakenMessageTipCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedpacketTakenMessageTipCell.h; sourceTree = "<group>"; };
 		433C2D181CD0A34C00D2559D /* RedpacketTakenMessageTipCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedpacketTakenMessageTipCell.m; sourceTree = "<group>"; };
+		434675501CFC592B00AEDE2A /* RedpacketTakenOutgoingMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedpacketTakenOutgoingMessage.h; sourceTree = "<group>"; };
+		434675511CFC592B00AEDE2A /* RedpacketTakenOutgoingMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedpacketTakenOutgoingMessage.m; sourceTree = "<group>"; };
 		4386BA6B1CD8935400B4D363 /* RedpacketTakenMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedpacketTakenMessage.h; sourceTree = "<group>"; };
 		4386BA6C1CD8935400B4D363 /* RedpacketTakenMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedpacketTakenMessage.m; sourceTree = "<group>"; };
 		43AAFAF01CEEACED00B47348 /* libRedpacketLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libRedpacketLib.a; sourceTree = "<group>"; };
@@ -779,6 +782,8 @@
 				43C021201CCDE9B500333D68 /* RedpacketMessage.m */,
 				4386BA6B1CD8935400B4D363 /* RedpacketTakenMessage.h */,
 				4386BA6C1CD8935400B4D363 /* RedpacketTakenMessage.m */,
+				434675501CFC592B00AEDE2A /* RedpacketTakenOutgoingMessage.h */,
+				434675511CFC592B00AEDE2A /* RedpacketTakenOutgoingMessage.m */,
 				43EFD2621CCE0447008CEBAF /* RedpacketMessageCell.h */,
 				43EFD2631CCE0447008CEBAF /* RedpacketMessageCell.m */,
 				433C2D171CD0A34C00D2559D /* RedpacketTakenMessageTipCell.h */,
@@ -1774,6 +1779,7 @@
 				E475A3371AE6981B009C31D7 /* RCDPrivateSettingViewController.m in Sources */,
 				E4E9396E1AD65A95001E0AC6 /* UIImage+MultiFormat.m in Sources */,
 				E4E939941AD65BF4001E0AC6 /* RCDUserInfo.m in Sources */,
+				434675521CFC592B00AEDE2A /* RedpacketTakenOutgoingMessage.m in Sources */,
 				E4E9397C1AD65B0D001E0AC6 /* RCDChatViewController.m in Sources */,
 				E4E939661AD65A95001E0AC6 /* SDWebImageCompat.m in Sources */,
 				E4E9395C1AD65A95001E0AC6 /* JSONValueTransformer.m in Sources */,
