@@ -29,6 +29,7 @@
 #import "RedpacketConfig.h"
 #import "RedpacketMessage.h"
 #import "RedpacketTakenMessage.h"
+#import "RedpacketTakenOutgoingMessage.h"
 #pragma mark -
 
 //#define RONGCLOUD_IM_APPKEY @"e0x9wycfx7flq" //offline key
@@ -86,7 +87,8 @@
   [[RCIM sharedRCIM] registerMessageType:[RCDTestMessage class]];
   [[RCIM sharedRCIM] registerMessageType:[RedpacketMessage class]];
   [[RCIM sharedRCIM] registerMessageType:[RedpacketTakenMessage class]];
-    
+    [[RCIM sharedRCIM] registerMessageType:[RedpacketTakenOutgoingMessage class]];
+
   //设置会话列表头像和会话界面头像
 
   [[RCIM sharedRCIM] setConnectionStatusDelegate:self];
@@ -569,6 +571,20 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
             }];
         }
     }
+#pragma mark - 红包相关代码
+    else if ([message.content isMemberOfClass:[RedpacketTakenOutgoingMessage class]]) {
+        RedpacketTakenOutgoingMessage *m = (RedpacketTakenOutgoingMessage *)message.content;
+        RedpacketTakenMessage *m2 = [RedpacketTakenMessage messageWithRedpacket:m.redpacket];
+        RCMessage *rcmsg = [[RCIMClient sharedRCIMClient] insertMessage:message.conversationType
+                                                               targetId:message.targetId
+                                                           senderUserId:message.senderUserId
+                                                             sendStatus:SentStatus_RECEIVED
+                                                                content:m2];
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:RCKitDispatchMessageNotification
+                                                            object:rcmsg];
+    }
+#pragma mark -
 }
 
 - (void)dealloc {
