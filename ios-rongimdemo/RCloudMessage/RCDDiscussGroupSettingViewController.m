@@ -129,7 +129,7 @@
     }else{
         if (0 == buttonIndex) {
             __weak typeof(&*self)  weakSelf = self;
-            [[RCIMClient sharedRCIMClient] quitDiscussion:self.targetId success:^(RCDiscussion *discussion) {
+            [[RCIM sharedRCIM] quitDiscussion:self.targetId success:^(RCDiscussion *discussion) {
             NSLog(@"退出讨论组成功");
             UIViewController *temp = nil;
             NSArray *viewControllers = weakSelf.navigationController.viewControllers;
@@ -279,7 +279,7 @@
             //加入讨论组
             if(addIdList.count != 0){
                 
-                [[RCIMClient sharedRCIMClient] addMemberToDiscussion:self.targetId userIdList:addIdList success:^(RCDiscussion *discussion) {
+                [[RCIM sharedRCIM] addMemberToDiscussion:self.targetId userIdList:addIdList success:^(RCDiscussion *discussion) {
                     NSLog(@"成功");
                 } error:^(RCErrorCode status) {
                 }];
@@ -303,7 +303,7 @@
                 self.conversationTitle = discussionTitle;
                 
                 __weak typeof(&*self)  weakSelf = self;
-                [[RCIMClient sharedRCIMClient] createDiscussion:discussionTitle userIdList:userIdList success:^(RCDiscussion *discussion) {
+                [[RCIM sharedRCIM] createDiscussion:discussionTitle userIdList:userIdList success:^(RCDiscussion *discussion) {
                     
                     dispatch_async(dispatch_get_main_queue(), ^{
                         RCDChatViewController *chat =[[RedpacketDemoViewController alloc]init];
@@ -330,7 +330,7 @@
     //设置成员邀请权限
 
 
-    [[RCIMClient sharedRCIMClient] setDiscussionInviteStatus:self.targetId isOpen:swch.on success:^{
+    [[RCIM sharedRCIM] setDiscussionInviteStatus:self.targetId isOpen:swch.on success:^{
 //        DebugLog(@"设置成功");
     } error:^(RCErrorCode status) {
         
@@ -387,7 +387,7 @@
     if ([user.userId isEqualToString:[RCIMClient sharedRCIMClient].currentUserInfo.userId]) {
         return;
     }
-    [[RCIMClient sharedRCIMClient] removeMemberFromDiscussion:self.targetId
+    [[RCIM sharedRCIM] removeMemberFromDiscussion:self.targetId
                                                    userId:user.userId
     success:^(RCDiscussion *discussion) {
         NSLog(@"踢人成功");

@@ -10,6 +10,7 @@
 #import "RCDChatViewController.h"
 #import <RongIMKit/RongIMKit.h>
 #import <RongIMLib/RCUserInfo.h>
+#import <RongCallKit/RongCallKit.h>
 #import "RCDHttpTool.h"
 #import "UIImageView+WebCache.h"
 #import "MBProgressHUD.h"
@@ -62,7 +63,7 @@
 
 - (IBAction)btnVoIP:(id)sender {
     //语音通话
-    [[RCIM sharedRCIM] startVoIPCallWithTargetId:self.userInfo.userId];
+    [[RCCall sharedRCCall] startSingleCall:self.userInfo.userId mediaType:RCCallMediaAudio];
 }
 
 

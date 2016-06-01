@@ -40,6 +40,10 @@
 -(void) getGroupByID:(NSString *) groupID
           successCompletion:(void (^)(RCGroup *group)) completion;
 
+//根据id获取单个群组的用户列表
+-(void) getGroupMembersByGroupID:(NSString *) groupID
+               successCompletion:(void (^)(NSArray *members)) completion;
+
 //加入群组
 -(void) joinGroup:(int) groupID
     withGroupName:(NSString *)groupName

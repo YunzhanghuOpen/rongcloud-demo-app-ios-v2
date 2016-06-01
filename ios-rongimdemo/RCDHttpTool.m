@@ -85,6 +85,25 @@
 
     }
 }
+
+-(void) getGroupMembersByGroupID:(NSString *) groupID
+               successCompletion:(void (^)(NSArray *members)) completion
+{
+    [AFHttpTool getGroupByID:groupID success:^(id response) {
+        NSString *code = [NSString stringWithFormat:@"%@",response[@"code"]];
+        NSDictionary *result = response[@"result"];
+        if (result && [code isEqualToString:@"200"]) {
+            
+            NSArray *members = [result objectForKey:@"users"];
+            
+            completion(members);
+        }
+        
+    } failure:^(NSError* err){
+        completion(nil);
+    }];
+}
+
 -(void) getUserInfoByUserID:(NSString *) userID
                          completion:(void (^)(RCUserInfo *user)) completion
 {

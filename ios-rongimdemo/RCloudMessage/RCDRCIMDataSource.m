@@ -135,6 +135,18 @@
     }
 }
 
+- (void)getAllMembersOfGroup:(NSString *)groupId
+                      result:(void (^)(NSArray *userIdList))resultBlock  {
+    [[RCDHttpTool shareInstance] getGroupMembersByGroupID:groupId successCompletion:^(NSArray *members) {
+        NSLog(@"get the memebers here!");
+        NSMutableArray *ret = [[NSMutableArray alloc] init];
+        for (NSDictionary *userDict in members) {
+            [ret addObject:userDict[@"id"]];
+        }
+        resultBlock(ret);
+    }];
+}
+
 - (void)cacheAllUserInfo:(void (^)())completion
 {
     __block NSArray * regDataArray;

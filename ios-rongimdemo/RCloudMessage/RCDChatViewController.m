@@ -36,7 +36,6 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
     self.enableSaveNewPhotoToLocalSystem = YES;
-
     if (self.conversationType != ConversationType_CHATROOM) {
         if (self.conversationType == ConversationType_DISCUSSION) {
             [[RCIMClient sharedRCIMClient] getDiscussion:self.targetId success:^(RCDiscussion *discussion) {

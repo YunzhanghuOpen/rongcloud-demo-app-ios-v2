@@ -21,6 +21,7 @@
 #import <RongIMKit/RongIMKit.h>
 #import "RCDUserInfo.h"
 #import "RCDFriendInvitationTableViewController.h"
+#import "RCDPublicServiceListViewController.h"
 
 #pragma mark - 红包相关头文件
 #import "RedpacketDemoViewController.h"
@@ -301,7 +302,7 @@
             }
             [discussionTitle deleteCharactersInRange:NSMakeRange(discussionTitle.length - 1, 1)];
 
-            [[RCIMClient sharedRCIMClient] createDiscussion:discussionTitle userIdList:userIdList success:^(RCDiscussion *discussion) {
+            [[RCIM sharedRCIM] createDiscussion:discussionTitle userIdList:userIdList success:^(RCDiscussion *discussion) {
                 NSLog(@"create discussion ssucceed!");
                 dispatch_async(dispatch_get_main_queue(), ^{
 #pragma mark - 对于特定的界面使用红包功能
@@ -334,7 +335,7 @@
  */
 - (void) pushPublicService:(id) sender
 {
-        RCPublicServiceListViewController *publicServiceVC = [[RCPublicServiceListViewController alloc] init];
+        RCDPublicServiceListViewController *publicServiceVC = [[RCDPublicServiceListViewController alloc] init];
         [self.navigationController pushViewController:publicServiceVC  animated:YES];
     
 }
