@@ -7,7 +7,6 @@
 //
 
 #import "RCDPersonDetailViewController.h"
-#import "RCDChatViewController.h"
 #import <RongIMKit/RongIMKit.h>
 #import <RongIMLib/RCUserInfo.h>
 #import <RongCallKit/RongCallKit.h>
@@ -15,6 +14,7 @@
 #import "UIImageView+WebCache.h"
 #import "MBProgressHUD.h"
 #import "RCDataBaseManager.h"
+#import "RedpacketDemoViewController.h"
 
 @interface RCDPersonDetailViewController ()<UIActionSheetDelegate>
 @property (nonatomic)BOOL inBlackList;
@@ -54,7 +54,7 @@
 
 - (IBAction)btnConversation:(id)sender {
     //创建会话
-    RCDChatViewController *chatViewController = [[RCDChatViewController alloc] init];
+    RCDChatViewController *chatViewController = [[RedpacketDemoViewController alloc] init];
     chatViewController.conversationType = ConversationType_PRIVATE;
     chatViewController.targetId = self.userInfo.userId;
     chatViewController.title = self.userInfo.name;

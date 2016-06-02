@@ -12,6 +12,8 @@
 #import "RCDRCIMDataSource.h"
 #import "RCDChatViewController.h"
 
+#import "RedpacketDemoViewController.h"
+
 @interface RCDGroupDetailViewController () <UIActionSheetDelegate>
 
 @end
@@ -154,7 +156,7 @@
       [self.navigationController popViewControllerAnimated:YES];
       return;
     } else {
-      RCDChatViewController *temp = [[RCDChatViewController alloc] init];
+      RCDChatViewController *temp = [[RedpacketDemoViewController alloc] init];
       temp.targetId = _groupInfo.groupId;
       temp.conversationType = ConversationType_GROUP;
       temp.userName = _groupInfo.groupName;
@@ -163,7 +165,7 @@
     }
   } else {
 
-    RCDChatViewController *temp = [[RCDChatViewController alloc] init];
+    RCDChatViewController *temp = [[RedpacketDemoViewController alloc] init];
     temp.targetId = _groupInfo.groupId;
     temp.conversationType = ConversationType_GROUP;
     temp.userName = _groupInfo.groupName;

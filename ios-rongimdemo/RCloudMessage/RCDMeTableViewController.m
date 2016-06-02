@@ -9,7 +9,7 @@
 #import "RCDMeTableViewController.h"
 #import "UIColor+RCColor.h"
 #import <RongIMLib/RongIMLib.h>
-#import "RCDChatViewController.h"
+#import "RedpacketDemoViewController.h"
 #import "RCDRCIMDataSource.h"
 #import "RCDCommonDefine.h"
 @interface RCDMeTableViewController ()
@@ -93,7 +93,7 @@
 {
     if (indexPath.section == 2 && indexPath.row == 0) {
 #define SERVICE_ID @"kefu114"
-        RCDChatViewController *chatService = [[RCDChatViewController alloc] init];
+        RCDChatViewController *chatService = [[RedpacketDemoViewController alloc] init];
         chatService.userName = @"客服";
         chatService.targetId = SERVICE_ID;
         chatService.conversationType = ConversationType_CUSTOMERSERVICE;

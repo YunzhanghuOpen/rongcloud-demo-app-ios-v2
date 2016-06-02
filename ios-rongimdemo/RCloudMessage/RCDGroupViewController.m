@@ -16,7 +16,7 @@
 #import "RCDCommonDefine.h"
 #import "RCDLoginInfo.h"
 #import <RongIMKit/RongIMKit.h>
-#import "RCDChatViewController.h"
+#import "RedpacketDemoViewController.h"
 #import "UIColor+RCColor.h"
 #import "RCDRCIMDataSource.h"
 #import "RCDataBaseManager.h"
@@ -195,7 +195,7 @@
         }
     }
     if (groupInfo) {
-        RCDChatViewController *temp = [[RCDChatViewController alloc]init];
+        RCDChatViewController *temp = [[RedpacketDemoViewController alloc]init];
         temp.targetId = groupInfo.groupId;
         temp.conversationType = ConversationType_GROUP;
         temp.userName = groupInfo.groupName;
