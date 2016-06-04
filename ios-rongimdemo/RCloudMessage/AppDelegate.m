@@ -574,15 +574,18 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
 #pragma mark - 红包相关代码
     else if ([message.content isMemberOfClass:[RedpacketTakenOutgoingMessage class]]) {
         RedpacketTakenOutgoingMessage *m = (RedpacketTakenOutgoingMessage *)message.content;
-        RedpacketTakenMessage *m2 = [RedpacketTakenMessage messageWithRedpacket:m.redpacket];
-        RCMessage *rcmsg = [[RCIMClient sharedRCIMClient] insertMessage:message.conversationType
-                                                               targetId:message.targetId
-                                                           senderUserId:message.senderUserId
-                                                             sendStatus:SentStatus_RECEIVED
-                                                                content:m2];
+        if([m.redpacket.currentUser.userId isEqualToString:m.redpacket.redpacketReceiver.userId]
+           || [m.redpacket.currentUser.userId isEqualToString:m.redpacket.redpacketSender.userId]) {
+            RedpacketTakenMessage *m2 = [RedpacketTakenMessage messageWithRedpacket:m.redpacket];
+            RCMessage *rcmsg = [[RCIMClient sharedRCIMClient] insertMessage:message.conversationType
+                                                                   targetId:message.targetId
+                                                               senderUserId:message.senderUserId
+                                                                 sendStatus:SentStatus_RECEIVED
+                                                                    content:m2];
         
-        [[NSNotificationCenter defaultCenter] postNotificationName:RCKitDispatchMessageNotification
-                                                            object:rcmsg];
+            [[NSNotificationCenter defaultCenter] postNotificationName:RCKitDispatchMessageNotification
+                                                                object:rcmsg];
+        }
     }
 #pragma mark -
 }
