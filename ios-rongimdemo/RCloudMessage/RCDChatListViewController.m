@@ -412,7 +412,10 @@
 {
     return 67.0f;
 }
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
+    return [super tableView:tableView cellForRowAtIndexPath:indexPath];
+}
 //自定义cell
 -(RCConversationBaseCell *)rcConversationListTableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
