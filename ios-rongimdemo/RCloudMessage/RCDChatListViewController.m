@@ -443,13 +443,9 @@
         cell.lastSendMessageStatusView.hidden = YES;
         if (model.conversationModelType == RC_CONVERSATION_MODEL_TYPE_NORMAL
             && model.conversationType != ConversationType_PRIVATE) {
-            NSArray * describeArray = [cell.messageContentLabel.text componentsSeparatedByString:@":"];
-            if (describeArray.count >= 2) {
-                NSMutableString * contentString = [NSMutableString string];
-                for (int index = 1; index < describeArray.count; index ++) {
-                    [contentString appendString:describeArray[index]];
-                }
-                cell.messageContentLabel.text = contentString;
+            if ([model.lastestMessage respondsToSelector:@selector(conversationDigest)]) {
+                NSString *digest = [model.lastestMessage performSelector:@selector(conversationDigest)];
+                cell.messageContentLabel.text = digest;
             }
         }
         
