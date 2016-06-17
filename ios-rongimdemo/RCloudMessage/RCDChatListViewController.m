@@ -25,7 +25,8 @@
 
 #pragma mark - 红包相关头文件
 #import "RedpacketDemoViewController.h"
-
+#import "RedpacketMessage.h"
+#import "RedpacketTakenMessage.h"
 #pragma mark -
 
 @interface RCDChatListViewController ()
@@ -412,9 +413,48 @@
 {
     return 67.0f;
 }
+#pragma mark 红包相关改动
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    RCConversationCell * cell = (RCConversationCell*)[super tableView:tableView cellForRowAtIndexPath:indexPath];
+    if (![cell isKindOfClass:[RCConversationCell class]]) return cell;
+    
+    __block NSMutableArray * removeConstraintsArray = [NSMutableArray array];
+    [cell.contentView.constraints enumerateObjectsUsingBlock:^(__kindof NSLayoutConstraint * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (obj.relation == NSLayoutRelationLessThanOrEqual
+            && obj.firstItem == cell.messageContentLabel) {
+            [removeConstraintsArray addObject:obj];
+        }
 
-    return [super tableView:tableView cellForRowAtIndexPath:indexPath];
+    }];
+
+    if (removeConstraintsArray) {
+        [cell.contentView removeConstraints:removeConstraintsArray];
+        NSLayoutConstraint * messageContentLableWidthLayout = [NSLayoutConstraint constraintWithItem:cell.messageContentLabel attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:cell.contentView attribute:NSLayoutAttributeRight multiplier:1 constant:-10];
+        NSLayoutConstraint * messageContentLableLeftLayout = [NSLayoutConstraint constraintWithItem:cell.messageContentLabel attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:cell.headerImageViewBackgroundView attribute:NSLayoutAttributeRight multiplier:1 constant:8];
+        [cell.contentView addConstraints:@[messageContentLableWidthLayout,messageContentLableLeftLayout]];
+        [cell layoutIfNeeded];
+    }
+    
+    RCConversationModel *model = self.conversationListDataSource[indexPath.row];
+    
+    cell.lastSendMessageStatusView.hidden = NO;
+    if (([model.lastestMessage isKindOfClass:[RedpacketMessage class]] || [model.lastestMessage isKindOfClass:[RedpacketTakenMessage class]]) ) {
+        
+        cell.lastSendMessageStatusView.hidden = YES;
+        if (model.conversationModelType == RC_CONVERSATION_MODEL_TYPE_NORMAL
+            && model.conversationType != ConversationType_PRIVATE) {
+            NSArray * describeArray = [cell.messageContentLabel.text componentsSeparatedByString:@":"];
+            if (describeArray.count >= 2) {
+                NSMutableString * contentString = [NSMutableString string];
+                for (int index = 1; index < describeArray.count; index ++) {
+                    [contentString appendString:describeArray[index]];
+                }
+                cell.messageContentLabel.text = contentString;
+            }
+        }
+        
+    }
+    return cell;
 }
 //自定义cell
 -(RCConversationBaseCell *)rcConversationListTableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
