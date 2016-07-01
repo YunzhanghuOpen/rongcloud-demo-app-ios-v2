@@ -82,7 +82,7 @@
     [[RCIM sharedRCIM] initWithAppKey:RONGCLOUD_IM_APPKEY];
     
   }
-  
+#pragma mark 融云红包自定义消息体注册
   // 注册自定义测试消息
   [[RCIM sharedRCIM] registerMessageType:[RCDTestMessage class]];
   [[RCIM sharedRCIM] registerMessageType:[RedpacketMessage class]];
